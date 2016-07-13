@@ -13,3 +13,6 @@ function addPostCode(code) {
 	onDocumentLoad.push(code);
 }
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service_worker.js');
+}
