@@ -65,17 +65,28 @@
 <link rel="stylesheet" type="text/css" media="all" href="{{globals.base_static}}css/{{css}}"/>
 {% endfor %}
 
-{# <meta name="mobile-web-app-capable" content="yes"> #}
 {% if globals.favicon %}
 	<link rel="shortcut icon" href="{{globals.base_static}}{{globals.favicon}}" type="image/x-icon"/>
 {% else %}
-	<link rel="shortcut icon"  href="{{globals.base_static}}img/favicons/logo_196x196.png" type="image/png" sizes="196x196"/>
-	<link rel="shortcut icon"  href="{{globals.base_static}}img/favicons/logo_128x128.png" type="image/png" sizes="128x128"/>
-	<link rel="shortcut icon"  href="{{globals.base_static}}img/favicons/logo_64x64.png" type="image/png" sizes="64x64"/>
-	<link rel="shortcut icon" href="{{globals.base_static}}img/favicons/logo_16x16.png" type="image/png" sizes="16x16"/>
+	<link rel="icon" href="{{globals.base_static}}img/favicons/favicon.ico">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Menéame">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="Menéame">
+
+	<link rel="apple-touch-icon" href="{{globals.base_static}}img/manifest/icon-48x48.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{globals.base_static}}img/manifest/icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="{{globals.base_static}}img/manifest/icon-96x96.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{globals.base_static}}img/manifest/icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="{{globals.base_static}}img/manifest/icon-192x192.png">
+
+	<meta name="msapplication-TileImage" content="{{globals.base_static}}img/manifest/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#3f51b5">
+	<meta name="msapplication-tap-highlight" content="no">
 {% endif %}
 
-<link rel="apple-touch-icon" href="{{globals.base_static}}img/favicons/apple-touch-icon.png"/>
 <link rel="license" href="http://creativecommons.org/licenses/by/3.0/es/"/>
 
 {#
