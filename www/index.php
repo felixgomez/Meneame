@@ -38,7 +38,6 @@ if ($page > 1) {
 
 do_header($pagetitle, _('portada'));
 
-$from = '';
 switch ($globals['meta']) {
 	case '_subs':
 		if ($current_user->user_id && $current_user->has_subs) {
@@ -120,6 +119,7 @@ $globals['site_id'] = SitesMgr::my_id();
 if (!empty($globals['sponsored_link_uri'])) $sponsored_link = Link::from_db($globals['sponsored_link_uri'], 'uri');
 
 $links = $db->object_iterator($sql, "Link");
+
 if ($links) {
 	$counter = 0;
 	foreach($links as $link) {
